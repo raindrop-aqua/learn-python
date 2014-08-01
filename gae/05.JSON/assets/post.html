@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <button id="post-button">Post!</button>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="jquery.jsonrpc.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#post-button").click(function() {
+                $.jsonrpc({
+                    url: "/post",
+                    method: "data-store",
+                    params: {
+                        "name": "あいうえお",
+                        "environment": {
+                            "code": "601",
+                            "version": "sp4"
+                        }
+                    }
+                }, {
+                    success: function(result) {
+
+                    },
+                    error: function(error) {
+
+                    }
+                });
+//                $.ajax({
+//                    type: "post",
+//                    url: "/post",
+//                    data: {
+//                        "operation": "data-store",
+//                        "name": "あいうえお",
+//                        "environment": {
+//                            "code": "601",
+//                            "version": "sp4"
+//                        }
+//                    },
+//                    success: function(data) {
+//                        alert(data)
+//                    }
+//                });
+            });
+        });
+    </script>
+</body>
+</html>

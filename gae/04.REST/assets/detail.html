@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Detail</title>
+</head>
+<body>
+    <form action="/detail/?id={{ id }}" method="put">
+        <p>id:{{id}}</p>
+        <p>name:<input type="text" name="name" id="name" value="{{ name }}"></p>
+        <p>version:<input type="text" name="version" id="version" value="{{ version }}"></p>
+        <p>note:<textarea name="note" id="note" cols="30" rows="10">{{note}}</textarea></p>
+        <p>updated:{{ updated }}</p>
+        <hr>
+        <input type="submit" value="更新">
+        <form action="/detail/" method="delete">
+            <input type="hidden" name="id" value="{{ id }}">
+            <input type="submit" value="削除">
+        </form>
+    </form>
+</body>
+</html>

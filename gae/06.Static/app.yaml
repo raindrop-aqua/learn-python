@@ -1,0 +1,34 @@
+application: raindrop-02
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: no
+
+handlers:
+- url: /(.*\.html)
+  static_files: assets/\1
+  upload: assets/(.*\.html)
+
+- url: /js/(.*\.js)
+  static_files: assets/js/\1
+  upload: assets/js/(.*\.js)
+
+- url: /css/(.*\.css)
+  static_files: assets/css/\1
+  upload: assets/css/(.*\.css)
+
+- url: /img/(.*\.(gif|png|jpg))
+  static_files: assets/img/\1
+  upload: assets/img/(.*\.(gif|png|jpg))
+
+- url: /favicon.ico
+  static_files: assets/img/favicon.ico
+  upload: assets/img/favicon.ico
+
+- url: /
+  static_files: assets/index.html
+  upload: assets/index.html
+
+- url: /index.html
+  static_files: assets/index.html
+  upload: assets/index.html

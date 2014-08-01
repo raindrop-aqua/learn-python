@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html land="ja">
+<head>
+    <meta charset="utf-8">
+    <title>list</title>
+</head>
+<body>
+    <form action="/detail/" method="post">
+        <input type="submit" value="追加">
+    </form>
+    <hr/>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>version</th>
+            <th>updated</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <th><a href="/detail/?id={{ item.key.id }}">{{ item.key.id }}</a></th>
+            <td>{{ item.name }}</td>
+            <td>{{ item.version }}</td>
+            <td>{{ item.updated }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

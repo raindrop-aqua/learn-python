@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>DataStore - GQL</title>
+    </head>
+    <body>
+        <h1>DataStore - GQL</h1>
+        <p>{{message}}</p>
+        <form method="post" action="/">
+            <input type="hidden" name="function" value="input"/>
+            <table>
+                <tr>
+                    <th>名前：</th>
+                    <td><input type="text" name="name"/></td>
+                </tr>
+                <tr>
+                    <th>メッセージ：</th>
+                    <td>
+                        <textarea name="message">&nbsp;</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;</th>
+                    <td><input type="submit" value="送信" /></td>
+                </tr>
+            </table>            
+        </form>
+        <hr />
+        <form method="post" action="/">
+            <input type="hidden" name="function" value="search"/>
+            <table>
+                <tr>
+                    <th>ID：</th>
+                    <td><input type="text" name="id"/></td>
+                </tr>
+                <tr>
+                    <th>&nbsp;</th>
+                    <td><input type="submit" value="検索" /></td>
+                </tr>
+            </table>            
+        </form>
+        <hr />
+        <table border="1" width="500">
+            <tr>
+                <th width="50">ID</th>
+                <th width="300">メッセージ</th>
+                <th width="150">送信者</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>
+                    {{data.key.id}}
+                </td>
+                <td>
+                    {{data.message}}<br />
+                    {{data.time}}
+                </td>
+                <td>
+                    {{data.name}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

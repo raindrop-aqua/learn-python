@@ -6,3 +6,8 @@
 ## environment
 - python 2.7
 - django 1.6
+
+## settings
+### database(sqlite3)
+- user: admin
+- password: admin

@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^item/(?P<item_id>\d+)/$', 'ecsite.itempage.views.item_page_display'),
 )

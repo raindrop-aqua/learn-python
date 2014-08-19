@@ -23,6 +23,7 @@ SECRET_KEY = 'h=k$ut)6w9maoofeh1a3l-kebftgcvyx9xoawh%ba*4-jzid9u'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'itempage/templates')]
 
 ALLOWED_HOSTS = []
 

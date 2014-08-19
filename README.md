@@ -16,7 +16,5 @@ python version 2.x
 ## Use Google API
 
 ## django
-- site01 - [http://www.djangoproject.jp/doc/ja/1.0/intro/tutorial01.html](http://www.djangoproject.jp/doc/ja/1.0/intro/tutorial01.html)
-
-
-
+- mysite - [http://www.djangoproject.jp/doc/ja/1.0/intro/tutorial01.html](http://www.djangoproject.jp/doc/ja/1.0/intro/tutorial01.html)
+- ecsite - [http://codezine.jp/article/detail/4065](http://codezine.jp/article/detail/4065)

@@ -10,4 +10,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'', 'blog.views.main'),
+    url(r'^(\d+)/$', 'post'),
+    url(r'^add_comment/(\d+)/$', 'add_comment'),
 )

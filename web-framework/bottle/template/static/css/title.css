@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font: 400 0.813em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+}
+
+.text {
+  float: left;
+  margin-left: 12.8067499999%;
+  font-size: 1.231em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+}
+
+._button {
+  display: block;
+  float: left;
+  width: 29.4478527607%;
+  height: 35px;
+  margin: 65px 0 0 3.84714%;
+  border-radius: 3px;
+  background-color: rgb(222, 222, 222);
+  font-size: 1.231em;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+._container {
+  float: left;
+  width: 40.75%;
+  height: 271px;
+  margin: 30px 0 0 23.59896%;
+  background-color: rgb(99, 99, 99);
+}
+
+._input {
+  display: block;
+  float: left;
+  clear: both;
+  width: 50.1022494887%;
+  height: 30px;
+  margin: 5px 0 0 12.8419%;
+  padding: 0 10px;
+  background-color: rgb(242, 242, 242);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+}
+
+._select {
+  display: block;
+  float: left;
+  clear: both;
+  width: 50.1022494887%;
+  height: 30px;
+  margin: 5px 0 0 12.8419%;
+  padding-left: 10px;
+  border: 1px solid rgb(119, 119, 119);
+  border-radius: 3px;
+  background: url('../images/select-arrows.svg') rgb(242, 242, 242);
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: right center;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+}
+
+.text-1 {
+  margin-top: 37px;
+}
+
+.text-2 {
+  clear: both;
+  margin-top: 14px;
+}

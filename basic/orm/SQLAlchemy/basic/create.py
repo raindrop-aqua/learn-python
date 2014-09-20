@@ -19,7 +19,7 @@ class Person(Base):
 
 
 class Address(Base):
-    __tablename__ = 'Address'
+    __tablename__ = 'address'
 
     id = Column(Integer, primary_key=True)
     street_name = Column('street_name', String(50))
@@ -37,8 +37,10 @@ class Address(Base):
             self.person_id
         )
 
-
-if __name__ == '__main__':
-    engine = create_engine('sqlite:///my_database.db', echo=True)
+def execute():
+    engine = create_engine('sqlite:///basic/my_database.db', echo=True)
     Base.metadata.create_all(engine)
 
+
+if __name__ == '__main__':
+    execute()

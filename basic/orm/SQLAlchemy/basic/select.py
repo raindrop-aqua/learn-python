@@ -4,15 +4,16 @@ from insert import Person, Address, Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///my_database.db')
-Base.metadata.bind = engine
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
+if __name__ == '__main__':
+    engine = create_engine('sqlite:///basic/my_database.db', echo=True)
+    Base.metadata.bind = engine
+    DBSession = sessionmaker(bind=engine)
+    session = DBSession()
 
-person = session.query(Person).first()
-print person
+    person = session.query(Person).first()
+    print person
 
-address = session.query(Address).filter(Address.person == person).one()
-print address
+    address = session.query(Address).filter(Address.person == person).one()
+    print address
 
 

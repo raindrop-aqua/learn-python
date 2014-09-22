@@ -37,6 +37,7 @@ class Address(Base):
             self.person_id
         )
 
+
 def execute():
     engine = create_engine('sqlite:///basic/my_database.db', echo=True)
     Base.metadata.create_all(engine)

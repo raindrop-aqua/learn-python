@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <title>TODO</title>
+</head>
+<body>
+
+    <form action="/add" method="get">
+        <input name="sentence" type="text"/>
+        <input type="submit" value="追加"/>
+    </form>
+    <form action="/clear">
+        <input type="submit" value="クリア"/>
+    </form>
+
+    <ul>
+        % for sentence in sentence_list:
+        <li>{{ sentence.body }}</li>
+        % end
+    </ul>
+</body>
+</html>

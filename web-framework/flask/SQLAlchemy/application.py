@@ -15,13 +15,14 @@ class User(db.Model):
     email = db.Column(db.String(200), unique=True)
 
     def __repr__(self):
-        return '%s: %s' % (self.name, self.email)
+        return '%s: %s <%s>' % (self.id, self.name, self.email)
 
 
 db.create_all()
 
 for user in db.session.query(User).all():
-    print db.session.delete(user)
+    db.session.delete(user)
+db.session.commit()
 
 new_user = User(name='john doe', email='john@example.com')
 db.session.add(new_user)
@@ -30,5 +31,7 @@ db.session.commit()
 for user in db.session.query(User).all():
     print user
 
+print db.session.query(User).filter_by(name='john doe').first()
+print db.session.query(User).get(1)
 
 

@@ -11,8 +11,8 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80))
-    email = db.Column(db.String(200))
+    name = db.Column(db.String(80), unique=True)
+    email = db.Column(db.String(200), unique=True)
 
     def __repr__(self):
         return '%s: %s' % (self.name, self.email)
@@ -20,11 +20,15 @@ class User(db.Model):
 
 db.create_all()
 
+for user in db.session.query(User).all():
+    print db.session.delete(user)
+
 new_user = User(name='john doe', email='john@example.com')
 db.session.add(new_user)
 db.session.commit()
 
 for user in db.session.query(User).all():
     print user
+
 
 

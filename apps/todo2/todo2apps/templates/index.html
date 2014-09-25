@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO!</title>
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+    {% endfor %}
+    <form action="/add" method="post">
+        <input type="text" name="sentence" id="sentence"/>
+        <input type="submit" value="add"/>
+    </form>
+    <form action="/clear">
+        <input type="submit" value="clear"/>
+    </form>
+    <ul>
+        {% for sentence in sentence_list %}
+        <li>{{ sentence.body }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

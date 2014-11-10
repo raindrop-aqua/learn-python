@@ -20,3 +20,4 @@ python version 2.x
 - ecsite - [http://codezine.jp/article/detail/4065](http://codezine.jp/article/detail/4065)
 - photoorganizer - [http://lightbird.net/dbe/photo.html](http://lightbird.net/dbe/photo.html)
 - simpleblog - [http://lightbird.net/dbe/blog.html](http://lightbird.net/dbe/blog.html)
+- jumpingintodjango - Instant Django Application Development Starter

@@ -1,0 +1,10 @@
+{% extends 'questionsandanswers/base.html' %}
+{% block title %}Create a question{% endblock %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {% include 'questionsandanswers/component_form.html' %}
+    <input type="submit" value="Submit"/>
+</form>
+<p><a href="{% url 'index' %}">return questions</a></p>
+{% endblock %}

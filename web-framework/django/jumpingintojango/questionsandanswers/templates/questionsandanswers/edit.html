@@ -1,0 +1,9 @@
+{% extends 'questionsandanswers/base.html' %}
+{% block title %}Edit a question{% endblock %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {% include 'questionsandanswers/component_form.html' %}
+    <input type="submit" value="Submit"/>
+</form>
+{% endblock %}

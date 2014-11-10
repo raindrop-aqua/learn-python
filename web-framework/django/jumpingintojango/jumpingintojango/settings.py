@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -23,6 +24,8 @@ SECRET_KEY = '!l4#i@mg=txry%dym=5r+)9aoza(erbyr^fph4b#bbe7vw$ybe'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'questionsandanswers/templates'),
+                 os.path.join(BASE_DIR, 'jumpingintojango/templates')]
 
 ALLOWED_HOSTS = []
 
@@ -36,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'questionsandanswers'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -66,9 +70,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -81,3 +85,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+from django.core.urlresolvers import reverse_lazy
+LOGIN_URL = reverse_lazy('login')

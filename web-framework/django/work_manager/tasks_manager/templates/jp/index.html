@@ -1,0 +1,21 @@
+{% extends 'jp/base.html' %}
+{% block title %}Index{% endblock %}
+{% block h1 %}
+<div>{{my_var | escape}}</div>
+{% endblock %}
+{% block content %}
+<div>
+{% if years < 10 %}
+You are a children.
+{% elif years < 18 %}
+You are a teenager.
+{% else %}
+You are an adult.
+{% endif %}
+</div>
+<ul>
+    {% for city in cities %}
+    <li>{{ city }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

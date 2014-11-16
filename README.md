@@ -21,3 +21,4 @@ python version 2.x
 - photoorganizer - [http://lightbird.net/dbe/photo.html](http://lightbird.net/dbe/photo.html)
 - simpleblog - [http://lightbird.net/dbe/blog.html](http://lightbird.net/dbe/blog.html)
 - jumpingintodjango - Instant Django Application Development Starter
+- work_manager - Django Essentials
